@@ -33,7 +33,7 @@ const JobPosting = db.define('job-posting', {
     type: Sequelize.TEXT
   },
   jobTitle: {
-    type: Sequelize.Virtual,
+    type: Sequelize.VIRTUAL,
       get() {
         return `${this.positionName} at ${this.company}`
       }

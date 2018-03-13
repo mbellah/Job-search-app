@@ -4,4 +4,6 @@ const Sequelize = require('sequelize');
 
 console.log(chalk.yellow('Opening database connection'));
 
-module.exports = new Sequelize('postgres://localhost:5432/job-search-app');
+module.exports = new Sequelize('postgres://localhost:5432/job-search-app', {
+  logging: false
+});

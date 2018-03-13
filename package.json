@@ -2,7 +2,7 @@
   "name": "job-search-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start:dev": "webpack -w & nodemon main.js",
     "start": "node main"
@@ -25,7 +25,7 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
-    "sequelize": "^4.36.0"
+    "sequelize": "^4.36.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -33,12 +33,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "css-loader": "^0.28.10",
     "morgan": "^1.9.0",
-    "node-sass": "^4.7.2",
-    "nodemon": "^1.17.1",
-    "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.3",
     "webpack": "^4.1.1"
   }
 }

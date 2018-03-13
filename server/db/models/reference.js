@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 
 const Reference = db.define('reference', {
   name: {
-    type: Sequlize.STRING,
+    type: Sequelize.STRING,
     allowNull: false
   },
   status: {

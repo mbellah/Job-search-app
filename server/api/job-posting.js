@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const JobPosting = require('../db/models').model(JobPosting);
+const { JobPosting } = require('../db/models');
 
 // /api/jobposting
 

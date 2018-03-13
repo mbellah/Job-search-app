@@ -1,3 +1,3 @@
 const router = require('express').Router();
-const Document = require('../db/models').model(Document);
+const { Document } = require('../db/models');
 

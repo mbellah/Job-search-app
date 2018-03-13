@@ -7,3 +7,5 @@ const Reference = require('./reference');
 Document.belongsTo(JobPosting);
 Reference.belongsTo(JobPosting);
 JobPosting.hasMany(Reference);
+
+module.exports = db;
