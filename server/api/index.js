@@ -3,7 +3,7 @@ const apiRouter = require('express').Router();
 const db = require('../db');
 
 
-apiRouter.use('/job-posting', require('./job-posting'));
+apiRouter.use('/jobposting', require('./job-posting'));
 apiRouter.use('/document', require('./document'));
 apiRouter.use('/reference', require('./reference'));
 
@@ -22,9 +22,6 @@ apiRouter.post('/', (req, res, next) => {
     .then(jobPosting => res.status(201).json(jobPosting.jobTitle))
     .catch(next);
 });
-
-
-// /api/jobposting/document
 
 module.exports = apiRouter;
 
