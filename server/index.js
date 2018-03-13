@@ -21,6 +21,9 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'));
 }); //Send index.html for any other requests
 
+//api router
+app.use('/api', require('./api/index.js'));
+
 //error handling
 app.use((err, req, res, next) => {
   console.error(err.stack);
