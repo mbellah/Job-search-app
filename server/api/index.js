@@ -2,10 +2,14 @@
 const apiRouter = require('express').Router();
 // const db = require('../db');
 const JobPosting = require('../db/models/job-posting');
+const Document = require('../db/models/document');
+const Reference = require('../db/models/reference');
 
-// apiRouter.use('/jobposting', require('./job-posting'));
-// apiRouter.use('/document', require('./document'));
-// apiRouter.use('/reference', require('./reference'));
+apiRouter.use('/jobposting', JobPosting);
+/* why doesn't this work?:
+ apiRouter.use('/jobposting', JobPosting); */
+apiRouter.use('/document', Document);
+apiRouter.use('/reference', Reference);
 
 // /api
 
