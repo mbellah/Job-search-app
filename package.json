@@ -4,13 +4,14 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "build-client": "webpack",
+    "build": "webpack -w",
     "start:dev": "webpack -w & nodemon main.js",
     "start": "node main"
   },
   "keywords": [
     "react",
-    "redux"
+    "redux",
+    "skeleton"
   ],
   "author": "",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "sequelize": "^4.36.1"
