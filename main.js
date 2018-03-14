@@ -1,7 +1,7 @@
 'use strict';
 const db = require('./server/db/models')
 const app = require('./server')
-const PORT = 3000;
+const PORT = 8100;
 
 db.sync() // if you update your db schemas, make sure you drop the tables first and then recreate them
   .then(() => {
