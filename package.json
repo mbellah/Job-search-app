@@ -4,7 +4,6 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "build": "webpack -w",
     "start:dev": "webpack -w & nodemon main.js",
     "start": "node main"
   },
@@ -13,8 +12,6 @@
     "redux",
     "skeleton"
   ],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.2",

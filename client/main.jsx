@@ -1,15 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Root from './components/Root.jsx';
+'use strict'
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
 
-ReactDOM.render(
-  <Router>
+import store from './store/index.js'
+import Root from './components/Root'
+
+render(
+  <Provider store={store}>
     <Root />
-  </Router>,
+  </Provider>,
   document.getElementById('main')
-);
-
-// document.write('welcome to my app');
-
-// console.log('app loaded');
+)
