@@ -62,7 +62,7 @@ export function postJobPosition(jobPosition) {
 }
 
 //Reducer
-export default function reducer(state = initialState, action) {
+function reducer(state = initialState, action) {
   switch (action.type) {
     case GET_JOB_POSITIONS:
       return action.jobPositions;
@@ -72,3 +72,14 @@ export default function reducer(state = initialState, action) {
       return state;
   }
 }
+
+
+const store = createStore(
+    reducer,
+    composeWithDevTools(applyMiddleware(
+      thunkMiddleware,
+      loggingMiddleware
+    ))
+);
+
+export default store;
