@@ -1,16 +1,31 @@
 const router = require('express').Router();
 const { JobPosting } = require('../db/models');
 
-// /api/jobposting
+// /api/jobpostings
 
-router.get('/jobposting/:id', (req, res, next) => {
+router.get('/', (req, res, next) => {
+  JobPosting.findAll()
+    .then(jobPostings => {
+      res.json(jobPostings)
+    })
+    .catch(next);
+});
+
+router.post('/', (req, res, next) => {
+  JobPosting.create(req.body)
+    .then(jobPosting => res.status(201).json(jobPosting.jobTitle))
+    .catch(next);
+});
+
+//Single JobPosting
+router.get('/:id', (req, res, next) => {
   JobPosting.findById(req.params.id)
     .then(jobPosting => res.json(jobPosting))
     .catch(next);
 });
 //apiRouter.param??
 
-router.put('/jobposting/:id', (req, res, next) => {
+router.put('/:id', (req, res, next) => {
   JobPosting.update(req.body, {
     where: {
       id: req.params.id
@@ -21,8 +36,9 @@ router.put('/jobposting/:id', (req, res, next) => {
     .catch(next);
 });
 
-router.delete('/jobposting/:id', (req, res, next) => {
+router.delete('/:id', (req, res, next) => {
   JobPosting.destroy()
     .then(() => res.status(204).end())
     .catch(next);
 });
+
