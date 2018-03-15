@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 //logging
-app.use(morgan);
+app.use(morgan('dev'));
 
 //body parsing
 app.use(bodyParser.json());
