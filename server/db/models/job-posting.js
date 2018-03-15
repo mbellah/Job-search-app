@@ -1,3 +1,4 @@
+'use strict';
 const db = require('../index.js');
 const Sequelize = require('sequelize');
 
@@ -23,7 +24,8 @@ const JobPosting = db.define('job-posting', {
     type: Sequelize.DATE
   },
   status: {
-    type: Sequelize.ENUM('To Begin', 'In Progress', 'Completed', 'Inactive'),
+    type: Sequelize.ENUM,
+    values: ['To Begin', 'In Progress', 'Completed', 'Inactive'],
     defaultValue: 'In Progress'
   },
   jobDescription: {

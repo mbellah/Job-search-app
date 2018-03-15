@@ -2,8 +2,10 @@
 const chalk = require('chalk');
 const Sequelize = require('sequelize');
 
-console.log(chalk.yellow('Opening database connection'));
-
-module.exports = new Sequelize('postgres://localhost:5432/job-search-app', {
+const db = new Sequelize('postgres://localhost:5432/job-search-app', {
   logging: false
 });
+
+console.log(chalk.yellow('Opening database connection'));
+
+module.exports = db;

@@ -1,7 +1,7 @@
 'use strict';
 const db = require('../index.js');
-const JobPosting = require('./job-posting.js');
-const Document = require('./document.js');
+const JobPosting = require('./job-posting');
+const Document = require('./document');
 const Reference = require('./reference');
 
 Document.belongsTo(JobPosting);
